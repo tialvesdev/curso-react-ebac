@@ -1,0 +1,55 @@
+.hw4 {
+  color: #f07167;
+  font-family: "Roboto";
+  font-size: 48px;
+  font-weight: 100;
+  text-decoration: underline dashed;
+}
+
+.hw5 {
+  color: #8b63da;
+  font-family: "Times New Roman";
+  font-size: 40px;
+  font-weight: 200;
+  text-decoration: overline dotted;
+}
+
+.hw6 {
+  color: #ff2525;
+  font-family: "Bahnschrift";
+  font-size: 32px;
+  font-weight: 300;
+  text-decoration: line-through double;
+}
+
+.hw7 {
+  color: #ffe53b;
+  font-family: "Candara";
+  font-size: 28px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+.hw8 {
+  color: #00ff5b;
+  font-family: "Verdana";
+  font-size: 26px;
+  font-weight: 500;
+  text-decoration: overline;
+}
+
+.hw9 {
+  color: #808080;
+  font-family: "Candara";
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.hw10 {
+  color: #713e8b;
+  font-family: "Yu Gothic";
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: underline wavy;
+}
