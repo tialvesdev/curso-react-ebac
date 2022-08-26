@@ -1,0 +1,28 @@
+.input-area {
+    margin: 0 0 30px 0;
+    padding: 15px 15px 5px 15px;
+    width: 100%;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: end;
+    border: none;
+    border-bottom: 2px solid #999999;
+    border-radius: 10px;
+    background: none;
+    font-family: 'Open Sans';
+    transition: all .25s ease-in-out;
+}
+
+.input-area:focus, 
+.input-area:hover {
+    border: none;
+    outline: 1px solid #999999;
+    box-shadow: 5px 5px 2px #363636;
+}
+
+@media screen and (max-width: 600px) {
+    .input-area {
+        font-size: 50px;
+        margin: 0 0 40px 0;
+    }
+}

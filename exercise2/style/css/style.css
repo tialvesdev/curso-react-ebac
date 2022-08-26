@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #8fc9ff, #093e70);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calc {
+  background-color: #232023;
+  border-radius: 25px;
+  padding: 30px;
+  width: 60vw;
+  max-width: 400px;
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        display: contents;
+        align-items: unset;
+        justify-content: unset;
+        margin: 0
+    }
+    .calc {
+        width: 100vw;
+        max-width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        margin: 0;
+        padding: 40px;
+    }
+    .form {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(../fonts/open-sans/OpenSans-Regular.ttf);
+}
