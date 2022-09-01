@@ -18,7 +18,7 @@
 
 .btn:focus {
   outline: none;
-  box-shadow: 3px 3px 1px #5e5e5e;
+  box-shadow: none;
 }
 
 .btn.clear {
@@ -90,6 +90,10 @@
 .op:focus {
   outline: none;
   box-shadow: 3px 3px 1px #41a3ff;
+}
+
+.blue {
+  display: none;
 }
 
 .kbd {
