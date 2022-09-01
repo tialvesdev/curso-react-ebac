@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="./img/EBAC.ico" type="image/x-icon">
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="./style/css/style.css" />
+    <link rel="stylesheet" href="./style/css/text-input.style.css" />
+    <link rel="stylesheet" href="./style/css/kbd.style.css" />
+
+    <script src="https://kit.fontawesome.com/d08d66d5b5.js" crossorigin="anonymous"></script>
+    <script src="./js/input.js" defer></script>
+    <script src="./js/buttons.js" defer></script>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="calc">
+
+          <form class="form" id="form" autocomplete="off">
+            <input tabindex="1" autofocus id="input-area" class="input-area" type="text" spellcheck="false" onsubmit="handleEquals()" />
+          
+
+            <div class="kbd">
+                <button type="reset" tabindex="2" class="btn clear op" id="clear" onclick="handleBtn('clear')"><i class="fa-solid fa-c"></i></button>
+                <button type="button" tabindex="3" class="btn divide op" id="divide" onclick="handleBtn('divide')"><i class="fa-solid fa-divide"><span class="blue">/</span></i></button>
+                <button type="button" tabindex="4" class="btn multiply op" id="multiply" onclick="handleBtn('multiply')"><i class="fa-solid fa-xmark blue"><span class="blue">*</span></i></button>
+                <button type="button" tabindex="5" class="btn delete op" id="delete" onclick="handleBtn('delete')"><i class="fa-solid fa-delete-left"></i></button>
+                
+                <button type="button" tabindex="6" class="btn seven num" id="seven" onclick="handleBtn('seven')"> 7 </button>
+                <button type="button" tabindex="7" class="btn eight num" id="eight" onclick="handleBtn('eight')">8</button>
+                <button type="button" tabindex="8" class="btn nine num" id="nine" onclick="handleBtn('nine')">9</button>
+                <button type="button" tabindex="9" class="btn minus op" id="minus" onclick="handleBtn('minus')"><i class="fa-solid fa-minus blue"><span class="blue">-</span></i></button>
+
+                <button type="button" tabindex="10" class="btn four num" id="four" onclick="handleBtn('four')">4</button>
+                <button type="button" tabindex="11" class="btn five num" id="five" onclick="handleBtn('five')">5</button>
+                <button type="button" tabindex="12" class="btn six num" id="six" onclick="handleBtn('six')">6</button>
+                <button type="button" tabindex="13" class="btn plus op" id="plus" onclick="handleBtn('plus')"><i class="fa-solid fa-plus blue"><span class="blue">+</span></i></button>
+
+                <button type="button" tabindex="14" class="btn one num" id="one" onclick="handleBtn('one')">1</button>
+                <button type="button" tabindex="15" class="btn two num" id="two" onclick="handleBtn('two')">2</button>
+                <button type="button" tabindex="16" class="btn three num" id="three" onclick="handleBtn('three')">3</button>
+
+                <button type="button" tabindex="17" class="btn zero num" id="zero" onclick="handleBtn('zero')">0</button>
+                <button type="button" tabindex="18" class="btn point" id="point" onclick="handleBtn('point')">.</button>
+                <button type="submit" tabindex="19" class="btn equal op" id="equal"><i class="fa-solid fa-equals"></i></button>
+            </div>
+
+        </form>
+
+      </div>
+    </div>
+  </body>
+</html>

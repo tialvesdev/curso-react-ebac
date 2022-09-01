@@ -1,0 +1,140 @@
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  background: #464646;
+  font-family: "Open Sans";
+  font-weight: 100;
+  color: #fff;
+  font-size: 25px;
+  box-shadow: 3px 3px 1px #363636;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #363636;
+  box-shadow: none;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn.clear {
+  grid-area: clear;
+}
+.btn.divide {
+  grid-area: divide;
+}
+.btn.multiply {
+  grid-area: multiply;
+}
+.btn.delete {
+  grid-area: delete;
+}
+.btn.seven {
+  grid-area: seven;
+}
+.btn.eight {
+  grid-area: eight;
+}
+.btn.nine {
+  grid-area: nine;
+}
+.btn.minus {
+  grid-area: minus;
+}
+.btn.four {
+  grid-area: four;
+}
+.btn.five {
+  grid-area: five;
+}
+.btn.six {
+  grid-area: six;
+}
+.btn.plus {
+  grid-area: plus;
+}
+.btn.one {
+  grid-area: one;
+}
+.btn.two {
+  grid-area: two;
+}
+.btn.three {
+  grid-area: three;
+}
+.btn.zero {
+  grid-area: zero;
+}
+.btn.point {
+  grid-area: point;
+}
+.btn.equal {
+  grid-area: equal;
+  font-size: 30px;
+}
+
+.op {
+  background: #1f86e6;
+  box-shadow: 3px 3px 1px #186cbb;
+}
+
+.op:hover {
+  background-color: #186cbb;
+  box-shadow: none;
+}
+
+.op:focus {
+  outline: none;
+  box-shadow: 3px 3px 1px #41a3ff;
+}
+
+.blue {
+  display: none;
+}
+
+.kbd {
+  display: grid;
+  grid: repeat(5, 60px) / repeat(4, 1fr);
+  grid-template-areas:
+    "clear divide multiply delete"
+    "seven eight nine minus"
+    "four five six plus"
+    "one two three equal"
+    "zero zero point equal";
+  gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .kbd {
+    height: 100%;
+    display: grid;
+    grid: repeat(5, 1fr) / repeat(4, 1fr);
+    grid-template-areas:
+      "clear divide multiply delete"
+      "seven eight nine minus"
+      "four five six plus"
+      "one two three equal"
+      "zero zero point equal";
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+    .kbd {
+        height: 100%;
+        display: grid;
+        grid: repeat(6, 1fr) / repeat(3, 1fr);
+        grid-template-areas:
+          "clear divide delete"
+          "seven eight nine"
+          "four five six"
+          "one two three"
+          "zero point multiply"
+          "plus minus equal";
+        gap: 10px;   
+    }
+}
