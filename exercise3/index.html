@@ -21,8 +21,61 @@
 
     <main class="wrapper">
         <section class="form glm">
+            <h1>Adicione uma Pessoa</h1>
             <form action="">
-                <h1>form</h1>
+                <fieldset>
+                    <legend class="label">Nome Completo:</legend>
+                    <input class="inp-text" type="text" name="name" id="name" placeholder="João Maria da Silva">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Idade:</legend>
+
+                    <input type="radio" name="less18" id="less18" value="less18">
+                    <label class="label" for="less18">Menos de 18 anos</label>
+
+                    <input type="radio" name="18to30" id="l18to30" value="18to30">
+                    <label class="label" for="18to30">Entre 18 e 30 anos</label>
+
+                    <input type="radio" name="31to60" id="31to60" value="31to60">
+                    <label class="label" for="31to60">Entre 31 e 60 anos</label>
+
+                    <input type="radio" name="more60" id="more60" value="more60">
+                    <label class="label" for="more60">Mais de 60 anos</label0>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Pronomes:</legend>
+
+                    <input type="checkbox" name="he" id="he">
+                    <label for="he">Ele/Dele</label>
+                    
+                    <input type="checkbox" name="they" id="they">
+                    <label for="they">Elu/Delu</label>
+
+                    <input type="checkbox" name="she" id="she">
+                    <label for="she">Ela/Dela</label>
+                    
+                    <input type="checkbox" name="anot" id="anot">
+                    <label for="anot">Outro</label>
+
+                    <input type="text" name="anot-text" id="anot-text" placeholder="Digite seu(s) outro(s) pronome(s):">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Estado Civil:</legend>
+
+                    <select name="marital" id="marital">
+                        <option value="" disabled selected>Selecione...</option>
+                        <option value="single">Solteiro</option>
+                        <option value="married">Casado</option>
+                        <option value="separated">Separado</option>
+                        <option value="divorced">Divorciado</option>
+                        <option value="widowed">Viúvo</option>
+                    </select>
+                </fieldset>
+
+                <button type="submit">Adicionar</button>
             </form>
         </section>
 
