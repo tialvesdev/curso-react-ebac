@@ -64,7 +64,7 @@
 
 .inp-text:focus {
     outline: none;
-    border: 2px solid rgb(83, 32, 150);
+    border: 1px solid rgb(83, 32, 150);
 }
 
 .inp-radio {
@@ -78,10 +78,69 @@
     outline-offset: 2px;
 }
 
+.label {
+  cursor: pointer;
+}
+
+.inp-check {
+}
+
 #anot-text {
   display: none;
+  width: 100%;
+  margin-top: 10px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgb(113, 48, 199);
+  border-radius: 0 8px;
+  color: white;
+  letter-spacing: 1px;
+  padding: 5px;
+  transition: all .2s ease-in-out;
+}
+
+#anot-text::placeholder {
+  color: #e6e6e6;
+}
+
+#anot-text:focus {
+  outline: none;
+  border: 1px solid rgb(83, 32, 150);
 }
 
 #anot:checked ~ #anot-text {
   display: block;
+}
+
+.slc {
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgb(113, 48, 199);
+  border-radius: 5px;
+  transition: all .2s ease-in-out;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.slc:focus {
+  outline: none;
+  border: 1px solid rgb(83, 32, 150);
+}
+
+.submit {
+  background: rgba(140, 62, 241, 1);
+  border: none;
+  padding: 10px 15px;
+  margin: 8px 0;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 rgb(109, 11, 165);
+  transition: all .2s ease-in-out;
+  letter-spacing: 1px;
+}
+
+.submit:hover {
+  background: rgb(109, 11, 165);
+  box-shadow: 3px 3px 0 rgba(140, 62, 241, 1);
 }
