@@ -1,0 +1,21 @@
+.table {
+    padding: 10px;
+    border-collapse: collapse;
+    
+}
+
+.table, .thead, .thead-tr, .th, .tbody, .tr, .td {
+    border: 1px solid white;
+    padding: 10px;
+}
+
+.thead-tr {
+}
+
+.th {
+
+}
+
+.tr {
+    margin: 50px;
+}
