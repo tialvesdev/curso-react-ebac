@@ -49,6 +49,33 @@
 
 .inp-text {
   padding: 5px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgb(113, 48, 199);
+  border-radius: 0 8px;
+  color: white;
+  letter-spacing: 1px;
+  transition: all .2s ease-in-out;
+}
+
+.inp-text::placeholder {
+    color: #e6e6e6;
+}
+
+.inp-text:focus {
+    outline: none;
+    border: 2px solid rgb(83, 32, 150);
+}
+
+.inp-radio {
+    accent-color: rgb(113, 48, 199);
+    cursor: pointer;
+}
+
+.inp-radio:focus,
+.inp-check:focus {
+    outline: 2px solid rgb(113, 48, 199);
+    outline-offset: 2px;
 }
 
 #anot-text {
