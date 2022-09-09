@@ -2,13 +2,9 @@
   border-collapse: separate;
   border: 1px solid white;
   border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
   padding: 20px;
-  max-height: 65vh;
-  overflow-y: scroll;
+  height: 100px;
 }
 
 .table::-webkit-scrollbar {
@@ -41,18 +37,17 @@
 
 .thead-tr {
   width: 100%;
-  /* gap: 20px; */
 }
 
 .th {
-  width: 100%;
-  padding: 10px 30px;
+  padding: 0.5vw 1vw;
   border-bottom: 1px solid white;
   color: #e6e6e6;
 }
 
-.tr {
-  border: 1px solid black;
+.tbody {
+  max-height: 500px;
+  overflow-y: scroll;
 }
 
 .tr:hover {
@@ -63,4 +58,5 @@
 .td {
   padding: 10px;
   word-wrap: break-word;
+  text-align: center;
 }
