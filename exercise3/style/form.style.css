@@ -141,3 +141,9 @@
   background: rgb(109, 11, 165);
   box-shadow: 3px 3px 0 rgba(140, 62, 241, 1);
 }
+
+@media screen and (max-width: 300px) {
+  .form {
+    max-height: 60vh;
+  }
+}
