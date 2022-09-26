@@ -36,7 +36,7 @@ function handleArr(element, index, array) {
   newTr.classList.add("tr");
 
   for (const key in element) {
-    console.log(`${key}: ${element[key]}`, c);
+    // console.log(`${key}: ${element[key]}`, c);
 
     const newTd = document.createElement("td");
     newTd.classList.add("td");
