@@ -1,4 +1,4 @@
-const tableData = [
+const arrData = [
   {
     name: "Jão Arvis",
     age: "Entre 18 e 30",
@@ -9,26 +9,65 @@ const tableData = [
     maritage: "Noivo",
   },
   {
-    name: "Jão Arvis",
-    age: "Entre 18 e 30",
+    name: "Bastião Santos",
+    age: "Menos de 18",
     pronouns: {
       1: "Ele/Dele",
-      2: "Ela/Dela",
     },
-    maritage: "Noivo",
+    maritage: "Solteiro",
   },
   {
-    name: "Jão Arvis",
-    age: "Entre 18 e 30",
+    name: "Severino Oliveira",
+    age: "Entre 31 e 60",
     pronouns: {
       1: "Ele/Dele",
       2: "Ela/Dela",
+      3: "Elu/Delu",
+      4: "Elx/Delx",
     },
-    maritage: "Noivo",
-  }
+    maritage: "Casado",
+  },
 ];
+let c = 1;
 
-console.log(tableData);
+// Handler of arr.map
+function handleArr(element, index, array) {
+  const newTr = document.createElement("tr");
+  newTr.classList.add("tr");
+
+  for (const key in element) {
+    console.log(`${key}: ${element[key]}`, c);
+
+    const newTd = document.createElement("td");
+    newTd.classList.add("td");
+
+    if (c === 3) {
+
+      const pronsString = Object.values(element.pronouns).join(' - ');
+
+      const text = document.createTextNode(pronsString);
+      newTd.appendChild(text);
+
+    } else {
+
+      const text = document.createTextNode(element[key]);
+      newTd.appendChild(text);
+
+    }
+
+    newTr.appendChild(newTd);
+
+    c == 4 ? c = 1 : c++;
+  }
+
+  document.getElementById("tbody").appendChild(newTr);
+
+
+}
+
+const arrToTable = arrData.map(handleArr);
+
+// console.log(tableArr);
 
 /*
   1- Para cada objeto do array:
@@ -91,8 +130,5 @@ console.log(tableData);
     1.4- Subir a tr com as 4 td's
 
   2- Igualar o array com a tabela
-
-
-
 
 */
