@@ -15,26 +15,36 @@ anot.addEventListener("change", () => {
 form.addEventListener("submit", (e) => {
   const nameValue = document.getElementById("name").value;
   const ageValue = document.querySelector('input[name="age"]:checked').value;
-  const gendersChecked = document.querySelectorAll(
+  const pronounsChecked = document.querySelectorAll(
     'input[type="checkbox"]:checked'
   );
-  const gendersValue = {};
+  const pronounsValue = {};
   const maritageValue = document.getElementById("marital").value;
 
   e.preventDefault();
 
-  if (gendersChecked.length == 0) {
+  if (pronounsChecked.length == 0) {
     validateCheck.innerText = "Selecione no mínimo um pronome!";
     validateCheck.style.color = "#FF1100";
   } else {
-    gendersChecked.forEach((element, index) => {
-      Object.assign(gendersValue, { [index + 1]: element.value });
+    pronounsChecked.forEach((element, index) => {
+      Object.assign(pronounsValue, { [index + 1]: element.value });
     });
 
-    console.log(gendersChecked);
     console.log(nameValue);
     console.log(ageValue);
-    console.log(gendersValue);
+    console.log(pronounsValue);
     console.log(maritageValue);
+    
+    const newPerson = {
+        name: nameValue,
+        age: ageValue,
+        pronouns: pronounsValue,
+        maritage: maritageValue
+    }
+
+    arrData.push(newPerson);
+    document.getElementById("tbody").innerHTML = '';
+    arrData.map(handleArr);
   }
 });
