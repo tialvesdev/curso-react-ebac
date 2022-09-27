@@ -1,33 +1,4 @@
-const arrData = [
-  {
-    name: "Jão Arvis",
-    age: "Entre 18 e 30",
-    pronouns: {
-      1: "Ele/Dele",
-      2: "Ela/Dela",
-    },
-    maritage: "Noivo",
-  },
-  {
-    name: "Bastião Santos",
-    age: "Menos de 18",
-    pronouns: {
-      1: "Ele/Dele",
-    },
-    maritage: "Solteiro",
-  },
-  {
-    name: "Severino Oliveira",
-    age: "Entre 31 e 60",
-    pronouns: {
-      1: "Ele/Dele",
-      2: "Ela/Dela",
-      3: "Elu/Delu",
-      4: "Elx/Delx",
-    },
-    maritage: "Casado",
-  },
-];
+const arrData = [];
 let c = 1;
 
 // Handler of arr.map
