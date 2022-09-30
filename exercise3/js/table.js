@@ -41,9 +41,7 @@ function checkTable() {
     document.getElementById('table').style.display = 'none';
     document.getElementById('alone').style.display = 'flex';
   } else {
-    document.getElementById('table').style.display = 'table';
-    document.getElementById('alone').style.display = 'none';
-    arrData.map(handleArr);
+    handleLoading();
   }
 }
 

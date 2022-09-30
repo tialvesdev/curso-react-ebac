@@ -30,11 +30,6 @@ form.addEventListener("submit", (e) => {
     pronounsChecked.forEach((element, index) => {
       Object.assign(pronounsValue, { [index + 1]: element.value });
     });
-
-    console.log(nameValue);
-    console.log(ageValue);
-    console.log(pronounsValue);
-    console.log(maritageValue);
     
     const newPerson = {
         name: nameValue,
