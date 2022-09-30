@@ -9,6 +9,8 @@ Este repositório foi criado para conter os arquivos de cada conteúdo apreendid
   10 formas diferentes de colocar Hello World na tela com JS
 
   [Link para Hello World](https://ti-alves.github.io/curso-react-ebac/exercise1/)
+  
+  <br>
 
 - Exercício 2 - Calculadora:
 
