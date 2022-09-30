@@ -2,7 +2,7 @@ const arrData = [];
 let c = 1;
 
 // Handler of arr.map
-function handleArr(element, index, array) {
+function handleArr(element) {
   const newTr = document.createElement("tr");
   newTr.classList.add("tr");
 
@@ -36,4 +36,15 @@ function handleArr(element, index, array) {
 
 }
 
-const arrToTable = arrData.map(handleArr);
+function checkTable() {
+  if (arrData.length == 0) {
+    document.getElementById('table').style.display = 'none';
+    document.getElementById('alone').style.display = 'flex';
+  } else {
+    document.getElementById('table').style.display = 'table';
+    document.getElementById('alone').style.display = 'none';
+    arrData.map(handleArr);
+  }
+}
+
+checkTable();

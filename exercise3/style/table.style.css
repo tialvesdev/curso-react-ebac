@@ -84,3 +84,22 @@
   word-wrap: break-word;
   text-align: center;
 }
+
+.alone {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  margin: 30px;
+}
+
+.alone-img {
+  width: 200px;
+  align-self: center;
+}
+
+.alone-text {
+  align-self: center;
+  color: white;
+}

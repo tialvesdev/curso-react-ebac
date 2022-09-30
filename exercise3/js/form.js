@@ -45,6 +45,6 @@ form.addEventListener("submit", (e) => {
 
     arrData.push(newPerson);
     document.getElementById("tbody").innerHTML = '';
-    arrData.map(handleArr);
+    checkTable();
   }
 });
