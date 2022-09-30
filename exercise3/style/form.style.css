@@ -1,0 +1,149 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+
+.form::-webkit-scrollbar {
+  width: 10px;
+}
+
+.form::-webkit-scrollbar-track {
+  background: none;
+}
+
+.form::-webkit-scrollbar-thumb {
+  background-color: #f3f3f3;
+}
+
+.form::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 62, 241, 1);
+}
+
+.form::-webkit-scrollbar-thumb,
+.form::-webkit-scrollbar-thumb:hover {
+  border: 3px solid rgba(0, 0, 0, 0);
+  border-top: 20px solid rgba(0, 0, 0, 0);
+  border-bottom: 20px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+}
+
+.flds {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.lgnd {
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.inp-text {
+  padding: 5px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgb(113, 48, 199);
+  border-radius: 0 8px;
+  color: white;
+  letter-spacing: 1px;
+  transition: all .2s ease-in-out;
+}
+
+.inp-text::placeholder {
+    color: #e6e6e6;
+}
+
+.inp-text:focus {
+    outline: none;
+    border: 1px solid rgb(83, 32, 150);
+}
+
+.inp-radio {
+    accent-color: rgb(113, 48, 199);
+    cursor: pointer;
+}
+
+.inp-radio:focus,
+.inp-check:focus {
+    outline: 2px solid rgb(113, 48, 199);
+    outline-offset: 2px;
+}
+
+.label {
+  cursor: pointer;
+}
+
+#anot-text {
+  display: none;
+  width: 100%;
+  margin-top: 10px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgb(113, 48, 199);
+  border-radius: 0 8px;
+  color: white;
+  letter-spacing: 1px;
+  padding: 5px;
+  transition: all .2s ease-in-out;
+}
+
+#anot-text::placeholder {
+  color: #e6e6e6;
+}
+
+#anot-text:focus {
+  outline: none;
+  border: 1px solid rgb(83, 32, 150);
+}
+
+#anot:checked ~ #anot-text {
+  display: block;
+}
+
+.slc {
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgb(113, 48, 199);
+  border-radius: 5px;
+  transition: all .2s ease-in-out;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.slc:focus {
+  outline: none;
+  border: 1px solid rgb(83, 32, 150);
+}
+
+.submit {
+  background: rgba(140, 62, 241, 1);
+  border: none;
+  padding: 10px 15px;
+  margin: 8px 0;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 rgb(109, 11, 165);
+  transition: all .2s ease-in-out;
+  letter-spacing: 1px;
+}
+
+.submit:hover {
+  background: rgb(109, 11, 165);
+  box-shadow: 3px 3px 0 rgba(140, 62, 241, 1);
+}
+
+@media screen and (max-width: 300px) {
+  .form {
+    max-height: 60vh;
+  }
+}
