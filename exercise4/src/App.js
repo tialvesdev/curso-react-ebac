@@ -1,6 +1,5 @@
 import "./App.css";
-import DateTime from "./components/utils/dateTime/DateTime";
-import Text from "./components/utils/text/Text";
+import HelloWorld1 from "./components/helloWorld1/HelloWorld1";
 
 function App() {
 
@@ -9,8 +8,7 @@ function App() {
   return (
     <div className="wrapper">
       <div className="main">
-        <Text p="teste"/>
-        <DateTime/>
+        <HelloWorld1/>
       </div>
     </div>
   );

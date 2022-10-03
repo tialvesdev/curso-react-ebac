@@ -21,7 +21,7 @@ const DateTime = () => {
     ].join("/"),
   ].join(" ");
 
-  return <Text p={dateTime} />;
+  return dateTime;
 };
 
 export default DateTime;
