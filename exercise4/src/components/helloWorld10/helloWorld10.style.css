@@ -1,0 +1,9 @@
+.hw10 {
+    color: maroon;
+    font-weight: 900;
+}
+
+.hw10::selection {
+    background-color: maroon;
+    color: white;
+}

@@ -4,7 +4,7 @@ import './helloWorld8.style.css'
 
 const HelloWorld8 = () => {
 
-    // 7th Hello World - Styled via CSS
+    // 8th Hello World - Styled via CSS
     return <p className="hw8 text"> 8) Hello World - {DateTime()} </p>
 }
 

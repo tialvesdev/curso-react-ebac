@@ -1,0 +1,9 @@
+.hw9 {
+    color: goldenrod;
+    letter-spacing: 2px;
+}
+
+.hw9::selection {
+    background-color: goldenrod;
+    color: white;
+}
