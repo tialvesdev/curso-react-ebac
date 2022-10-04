@@ -1,0 +1,9 @@
+.hw8 {
+    color: blueviolet;
+    font-size: 42px;
+}
+
+.hw8::selection {
+    background-color: blueviolet;
+    color: white;
+}
