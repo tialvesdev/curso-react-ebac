@@ -1,10 +1,10 @@
 import React from "react";
 import DateTime from "../utils/dateTime/DateTime";
-import Text from "../utils/text/Text";
 
 const HelloWorld1 = () => {
 
-    // 1st Hello Horld - Comming From a Variable
+    /* 1st Hello Horld - Comming From a Variable
+       * The only one without the style class */ 
     const hw1 = `1) Hello World - ${DateTime()}`
 
     return hw1

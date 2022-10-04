@@ -4,8 +4,8 @@ import DateTime from "../utils/dateTime/DateTime";
 
 const HelloWorld3 = () => {
 
+    // 3rd Hello World - Use the Text component and pass props
     const hw3 = `3) Hello World - ${DateTime()}`;
-    // 3rd Hello World - Use the Text component and pass as props
     return(
         <Text p={hw3} />
     )
