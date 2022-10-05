@@ -1,0 +1,11 @@
+.btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 25px;
+}
+
+.number {
+    background: #464646;
+}
