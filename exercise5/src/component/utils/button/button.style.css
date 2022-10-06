@@ -6,6 +6,10 @@
     font-size: 25px;
 }
 
-.number {
+.num {
     background: #464646;
+}
+
+.op {
+    background: darkorchid;
 }

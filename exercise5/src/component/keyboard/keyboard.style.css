@@ -1,4 +1,11 @@
 .keyboard {
     background-color: aqua;
     display: grid;
+    grid: repeat(5, 60px) / repeat(4, 1fr);
+    grid-template-areas: 
+    "clear divide multiply delete"
+    "seven eight nine minus"
+    "four five six plus"
+    "one two three equals"
+    "zero zero point equals";
 }
