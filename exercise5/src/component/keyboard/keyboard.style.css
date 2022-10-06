@@ -32,11 +32,11 @@
           grid: repeat(6, 1fr) / repeat(3, 1fr);
           grid-template-areas:
             "clear divide delete"
+            "multiply minus plus"
             "seven eight nine"
             "four five six"
             "one two three"
-            "zero point multiply"
-            "plus minus equals";
+            "zero point equals";
           gap: 10px;   
       }
   }
