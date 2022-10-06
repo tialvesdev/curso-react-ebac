@@ -17,13 +17,13 @@ const Keyboard = () => {
             <Button grid="one" style="btn num" action={() => ""} text="1"/>
             <Button grid="point" style="btn num" action={() => ""} text="."/>
             <Button grid="zero" style="btn num" action={() => ""} text="0"/>
-            <Button grid="clear" style="btn op" action={() => ""} text="C"/>
-            <Button grid="divide" style="btn op" action={() => ""} text="/"/>
-            <Button grid="multiply" style="btn op" action={() => ""} text="x"/>
-            <Button grid="delete" style="btn op" action={() => ""} text="Del"/>
-            <Button grid="minus" style="btn op" action={() => ""} text="-"/>
-            <Button grid="plus" style="btn op" action={() => ""} text="+"/>
-            <Button grid="equals" style="btn op" action={() => ""} text="="/>
+            <Button grid="clear" style="btn op" action={() => ""} text={<i className="fa-solid fa-c"></i>}/>
+            <Button grid="divide" style="btn op" action={() => ""} text={<i className="fa-solid fa-divide"></i>}/>
+            <Button grid="multiply" style="btn op" action={() => ""} text={<i className="fa-solid fa-xmark"></i>}/>
+            <Button grid="delete" style="btn op" action={() => ""} text={<i className="fa-solid fa-delete-left"></i>}/>
+            <Button grid="minus" style="btn op" action={() => ""} text={<i className="fa-solid fa-minus"></i>}/>
+            <Button grid="plus" style="btn op" action={() => ""} text={<i className="fa-solid fa-plus"></i>}/>
+            <Button grid="equals" style="btn op" action={() => ""} text={<i className="fa-solid fa-equals"></i>}/>
         </div>
     )
 }
