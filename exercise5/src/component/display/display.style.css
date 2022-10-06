@@ -5,7 +5,7 @@
   margin-bottom: 25px;
 }
 
-.input {
+.input-area {
   background: none;
   border: none;
   border-bottom: 2px solid #a0a0a0;
@@ -16,19 +16,27 @@
   font-size: 42px;
   padding: 15px 15px 5px 15px;
   word-break: break-word;
-  color: #FFFFFF;
+  color: #ffffff;
   caret-color: #8a32d3;
-  transition: all .25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
-.input:hover {
+.input-area:hover {
   border-bottom: 2px solid #8a32d3;
 }
 
-.input::selection {
+.input-area::selection {
   background: #8a32d3;
 }
 
-.input:focus {
+.input-area:focus {
   outline: none;
+}
+
+@media screen and (max-width: 600px) {
+  .input-area {
+    height: 100px;
+    font-size: 50px;
+    margin: 0 0 30px 0;
+  }
 }

@@ -7,7 +7,7 @@ const Calculator = () => {
 
     return(
         <div className="calc">
-            <form>
+            <form className="form">
                 <Display/>
                 <Keyboard/>
             </form>

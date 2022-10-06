@@ -6,7 +6,7 @@ const Display = () => {
     return (
         <div className="display">
             <SubText text="subText"/>
-            <input className="input" type="text" />
+            <input className="input-area" type="text" />
         </div>
     )
 }

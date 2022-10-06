@@ -12,3 +12,12 @@
   justify-content: center;
   background: linear-gradient(135deg, #d859ff, #5f39d1);
 }
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+      display: contents;
+      align-items: unset;
+      justify-content: unset;
+      margin: 0
+  }
+}

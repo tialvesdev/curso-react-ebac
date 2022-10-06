@@ -31,3 +31,9 @@
     box-shadow: 4px 4px #ba7feb;
     outline: none;
 }
+
+@media screen and (max-width: 600px) and (min-width: 374px) {
+    .btn {
+        font-size: 7vw;
+    }
+}
