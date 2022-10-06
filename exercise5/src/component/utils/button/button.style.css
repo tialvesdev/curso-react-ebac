@@ -4,12 +4,30 @@
     border-radius: 15px;
     color: #fff;
     font-size: 25px;
+    transition: all .25s ease-in-out;
 }
 
-.num {
+.btn.num {
     background: #464646;
+    box-shadow: 4px 4px #242424;
 }
 
-.op {
-    background: darkorchid;
+.btn.num:hover, .btn.op:hover {
+    box-shadow: none;
+    margin: 4px -4px -4px 4px;
+}
+
+.btn.num:focus {
+    box-shadow: 4px 4px #7e7e7e;
+    outline: none;
+}
+
+.btn.op {
+    background: #8a32d3;
+    box-shadow: 4px 4px #621c9b;
+}
+
+.btn.op:focus {
+    box-shadow: 4px 4px #ba7feb;
+    outline: none;
 }
