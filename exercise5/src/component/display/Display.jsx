@@ -32,16 +32,26 @@ class Display extends React.Component {
 
     console.log("handleInput");
 
+    // newData => BackSpace
     if (newData == null) {
       this.props.delLastOfCalculation();
+
+      // newData => not an allowed char
     } else if (!allowed.test(newData)) {
       e.preventDefault();
       console.log("not allowed");
     } else {
+      // newData => any operator and lastData => any operator
       if (op.includes(lastData) && op.includes(newData)) {
         this.props.delLastOfCalculation();
+      } 
+      // newData => X instead of *
+      if (newData === "X" || newData === "x") {
+        this.props.handleState("*");
+      } else {
+        this.props.handleState(newData);
       }
-      this.props.handleState(newData);
+      
     }
   }
 
@@ -52,7 +62,6 @@ class Display extends React.Component {
         <input
           type="text"
           className="input-area"
-          // defaultValue={this.props.calculation}
         />
       </div>
     );

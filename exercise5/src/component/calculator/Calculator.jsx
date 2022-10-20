@@ -8,32 +8,36 @@ class Calculator extends React.Component {
   constructor(props) {
     super(props);
 
+    // Calculation => input, answer => Subtext
     this.state = {
       calculation: "",
       answer: "-",
     };
 
+    // All operators
     this.op = ["+", "-", "*", "x", "X", "/"];
   }
 
-  // static getDerivedStateFromProps(props, state) {
-  //   console.log('getDerived')
-  //   return {
-  //     calculation: "",
-  //     answer: "-",
-  //   };
-  // }
-
-  delLastOfCalculation() {
-      const calc = this.state.calculation.slice(0, -1);
-      const answ = this.op.includes(calc.slice(-1)) || calc === "" ? "-" : eval(calc);
-
-      this.setState({
-          calculation: calc,
-          answer: answ,
-      });
+  componentDidMount() {
+    // When form is submitted
+    window.addEventListener("submit", (e) => {
+      e.preventDefault();
+    });
   }
 
+  // Deleting a char
+  delLastOfCalculation() {
+    const calc = this.state.calculation.slice(0, -1);
+    const answ =
+      this.op.includes(calc.slice(-1)) || calc === "" ? "-" : eval(calc);
+
+    this.setState({
+      calculation: calc,
+      answer: answ,
+    });
+  }
+
+  // Adding a new char
   handleState(newData) {
     const newCalc = this.state.calculation + newData;
     const newAnsw = this.op.includes(newCalc.slice(-1)) ? "-" : eval(newCalc);
@@ -47,11 +51,6 @@ class Calculator extends React.Component {
   }
 
   render() {
-    // When form is submitted
-    window.addEventListener("submit", (e) => {
-      e.preventDefault();
-    });
-
     console.log("render", this.state);
 
     return (
