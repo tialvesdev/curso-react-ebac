@@ -10,36 +10,49 @@ class Calculator extends React.Component {
 
     this.state = {
       calculation: "",
-      answer: "",
+      answer: "-",
     };
 
-}
+    this.op = ["+", "-", "*", "x", "X", "/"];
+  }
 
-delLastOfCalculation() {
-    const calc = this.state.calculation.slice(0, -1);
-    const answ = this.props.op.includes(calc.slice(-1)) ? "-" : eval(calc);
-    
+  // static getDerivedStateFromProps(props, state) {
+  //   console.log('getDerived')
+  //   return {
+  //     calculation: "",
+  //     answer: "-",
+  //   };
+  // }
+
+  delLastOfCalculation() {
+      const calc = this.state.calculation.slice(0, -1);
+      const answ = this.op.includes(calc.slice(-1)) || calc === "" ? "-" : eval(calc);
+
+      this.setState({
+          calculation: calc,
+          answer: answ,
+      });
+  }
+
+  handleState(newData) {
+    const newCalc = this.state.calculation + newData;
+    const newAnsw = this.op.includes(newCalc.slice(-1)) ? "-" : eval(newCalc);
+
     this.setState({
-        calculation: calc,
-        answer: answ,
+      calculation: newCalc,
+      answer: newAnsw,
     });
-}
 
-handleState(e) {
-    const newCalc = this.state.calculation + e.target.value;
-    const newAnsw = this.props.op.includes(newCalc.slice(-1)) ? "-" : eval(newCalc);
-    
-    this.setState({
-        calculation: newCalc,
-        answer: newAnsw,
-    });
-}
+    console.log("handleState", newCalc, newAnsw, this.state);
+  }
 
-render() {
+  render() {
     // When form is submitted
     window.addEventListener("submit", (e) => {
       e.preventDefault();
     });
+
+    console.log("render", this.state);
 
     return (
       <div className="calc">
@@ -49,7 +62,7 @@ render() {
             answer={this.state.answer}
             delLastOfCalculation={this.delLastOfCalculation.bind(this)}
             handleState={this.handleState.bind(this)}
-            op={this.props.op}
+            op={this.op}
           />
           <Keyboard />
         </form>

@@ -3,42 +3,60 @@ import SubText from "../utils/subText/SubText";
 import "./display.style.css";
 
 // Component for the "screen" part of the calculator
-const Display = (props) => {
-  // All allowed chars in the input and all operators
-  const allowed = /[0-9+-.xX*/]+/;
-  const inputData = [];
-  const op = props.op;
+class Display extends React.Component {
+  constructor(props) {
+    super(props);
 
-  function handleInput(e) {
-    
-    console.log("handleInput");
+    this.c = 0;
+  }
 
+  componentDidMount() {
+    // When something is pressed in the input
+    window.addEventListener("beforeinput", (e) => this.handleInput(e));
+  }
 
+  componentDidUpdate() {
+    this.c++;
+    console.log("didUpdate", this.c);
+  }
+
+  handleInput(e) {
+    // All allowed chars in the input and all operators
+    const allowed = /[0-9+-.xX*/]+/;
+    const inputData = [];
+    const op = this.props.op;
+
+    // The new and last char
     const newData = e.data;
     const lastData = inputData.slice(-1).toString();
 
+    console.log("handleInput");
+
     if (newData == null) {
-      props.delLastOfCalculation();
+      this.props.delLastOfCalculation();
     } else if (!allowed.test(newData)) {
       e.preventDefault();
+      console.log("not allowed");
     } else {
-        if (op.includes(lastData) && op.includes(newData)) {
-          props.delLastOfCalculation();
-        }
-        props.handleState()
-        // inputData.toString
+      if (op.includes(lastData) && op.includes(newData)) {
+        this.props.delLastOfCalculation();
+      }
+      this.props.handleState(newData);
     }
   }
 
-  // When something is pressed in the input
-  // window.addEventListener("beforeinput", (e) => handleInput(e));
-
-  return (
-    <div className="display">
-      <SubText text={props.answer} />
-      <input className="input-area" defaultValue={props.calculation} type="text" />
-    </div>
-  );
-};
+  render() {
+    return (
+      <div className="display">
+        <SubText text={this.props.answer} />
+        <input
+          type="text"
+          className="input-area"
+          // defaultValue={this.props.calculation}
+        />
+      </div>
+    );
+  }
+}
 
 export default Display;
