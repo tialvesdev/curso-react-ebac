@@ -28,8 +28,6 @@ class Calculator extends React.Component {
       calculation: calc,
       answer: answ,
     });
-
-    console.log("delete");
   }
 
   // Adding a new char
@@ -41,14 +39,7 @@ class Calculator extends React.Component {
       calculation: newCalc,
       answer: newAnsw,
     });
-
-    console.log("handleState", newCalc, newAnsw, this.state);
   }
-
-  // Getting result
-  // handleSubmit() {
-
-  // }
 
   componentDidMount() {
     // When form is submitted
@@ -63,15 +54,12 @@ class Calculator extends React.Component {
         answer: endAnsw,
       });
 
-      document.getElementById("teste").value = endCalc;
-
-      console.log("handleSubmit", endCalc, endAnsw, this.state);
+      // Push result to the display's input
+      document.getElementById("input").value = endCalc;
     });
   }
 
   render() {
-    console.log("render", this.state);
-
     return (
       <div className="calc">
         <form className="form">

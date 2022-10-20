@@ -18,7 +18,7 @@
 }
 
 .btn.num:focus {
-    box-shadow: 4px 4px #7e7e7e;
+    background: #575757;
     outline: none;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .btn.op:focus {
-    box-shadow: 4px 4px #ba7feb;
+    background: #a44fe9;
     outline: none;
 }
 
