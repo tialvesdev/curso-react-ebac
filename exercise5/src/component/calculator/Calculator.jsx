@@ -18,13 +18,6 @@ class Calculator extends React.Component {
     this.op = ["+", "-", "*", "x", "X", "/"];
   }
 
-  componentDidMount() {
-    // When form is submitted
-    window.addEventListener("submit", (e) => {
-      e.preventDefault();
-    });
-  }
-
   // Deleting a char
   delLastOfCalculation() {
     const calc = this.state.calculation.slice(0, -1);
@@ -35,6 +28,8 @@ class Calculator extends React.Component {
       calculation: calc,
       answer: answ,
     });
+
+    console.log("delete");
   }
 
   // Adding a new char
@@ -48,6 +43,30 @@ class Calculator extends React.Component {
     });
 
     console.log("handleState", newCalc, newAnsw, this.state);
+  }
+
+  // Getting result
+  // handleSubmit() {
+
+  // }
+
+  componentDidMount() {
+    // When form is submitted
+    window.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const endCalc = eval(this.state.calculation);
+      const endAnsw = "-";
+
+      this.setState({
+        calculation: endCalc,
+        answer: endAnsw,
+      });
+
+      document.getElementById("teste").value = endCalc;
+
+      console.log("handleSubmit", endCalc, endAnsw, this.state);
+    });
   }
 
   render() {
