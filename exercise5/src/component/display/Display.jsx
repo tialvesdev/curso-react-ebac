@@ -23,11 +23,10 @@ class Display extends React.Component {
     const newData = e.key;
     const lastData = inputData.slice(-1).toString();
 
-    // Enter is pressed, to resolve the equation
-    if (newData === "Enter") {
-      
+    // Normal action when pressed
+    if (newData === "Enter" || newData === "Tab") {
       // newData => BackSpace
-    } else if (newData == "Backspace" || newData == "Delete") {
+    } else if (newData === "Backspace" || newData === "Delete") {
       this.props.delLastOfCalculation();
 
       // newData => not an allowed char

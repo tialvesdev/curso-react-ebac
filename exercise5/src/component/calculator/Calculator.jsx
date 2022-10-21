@@ -28,7 +28,6 @@ class Calculator extends React.Component {
       calculation: calc,
       answer: answ,
     });
-
   }
 
   // Adding a new char
@@ -57,6 +56,20 @@ class Calculator extends React.Component {
 
       // Push result to the display's input
       document.getElementById("input").value = endCalc;
+    });
+    
+    // When the display is cleared
+    window.addEventListener("reset", (e) => {
+      const clCalc = "";
+      const clAnsw = "-";
+
+      this.setState({
+        calculation: clCalc,
+        answer: clAnsw,
+      });
+
+      // Push result to the display's input
+      document.getElementById("input").focus();
     });
   }
 
