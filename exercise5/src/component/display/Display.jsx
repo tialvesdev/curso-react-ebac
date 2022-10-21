@@ -10,7 +10,7 @@ class Display extends React.Component {
 
   componentDidMount() {
     // When something is pressed in the input
-    window.addEventListener("keypress", (e) => this.handleInput(e));
+    window.addEventListener("keydown", (e) => this.handleInput(e));
   }
 
   handleInput(e) {
@@ -27,7 +27,7 @@ class Display extends React.Component {
     if (newData === "Enter") {
       
       // newData => BackSpace
-    } else if (newData == "Backspace") {
+    } else if (newData == "Backspace" || newData == "Delete") {
       this.props.delLastOfCalculation();
 
       // newData => not an allowed char

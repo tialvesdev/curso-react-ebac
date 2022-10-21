@@ -28,6 +28,7 @@ class Calculator extends React.Component {
       calculation: calc,
       answer: answ,
     });
+
   }
 
   // Adding a new char
