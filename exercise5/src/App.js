@@ -1,11 +1,18 @@
 import './App.css';
+import React from 'react';
+import Text from './components/utils/text/Text';
+import Calculator from './components/calculator/Calculator';
 
-function App() {
-  return (
-    <>
-      <h1>app</h1>
-    </>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <>
+        <h1>Hello World!</h1>
+        <Text value="text" />
+        <Calculator />
+      </>
+    )
+  }
 }
 
 export default App;
