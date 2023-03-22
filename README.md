@@ -8,7 +8,7 @@ Este repositório foi criado para conter os arquivos de cada conteúdo apreendid
 
   10 formas diferentes de colocar Hello World na tela com JS
 
-  [Link para Hello World](https://ti-alves.github.io/curso-react-ebac/exercise1/)
+  [Link para Hello World](https://tialvesdev.github.io/curso-react-ebac/exercise1/)
   
   <br>
 
@@ -16,7 +16,7 @@ Este repositório foi criado para conter os arquivos de cada conteúdo apreendid
 
   Calculadora funcional, com as quatro operações via botões na tela ou o prório teclado
 
-  [Link para Calculadora](https://ti-alves.github.io/curso-react-ebac/exercise2/)
+  [Link para Calculadora](https://tialvesdev.github.io/curso-react-ebac/exercise2/)
   
   <br>
   
@@ -24,4 +24,4 @@ Este repositório foi criado para conter os arquivos de cada conteúdo apreendid
 
   Formulário ao lado de uma tabela, os dados submetidos pelo formulário aparecem listados dentro da tabela
   
-  [Link para Do Formulário à Tabela](https://ti-alves.github.io/curso-react-ebac/exercise3/)
+  [Link para Do Formulário à Tabela](https://tialvesdev.github.io/curso-react-ebac/exercise3/)
